@@ -653,3 +653,53 @@ footer {
         height: 270px;
     }
 }
+/* ===== HERO PHOTO PREMIUM ===== */
+
+.hero-photo {
+    position: relative;
+}
+
+.hero-photo::before {
+    content: "";
+    position: absolute;
+    width: 315px;
+    height: 370px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #d6a84f, #17609a);
+    z-index: 0;
+    transform: rotate(-4deg);
+}
+
+.hero-photo img {
+    position: relative;
+    z-index: 1;
+    width: 305px;
+    height: 365px;
+    border: 7px solid white;
+    border-radius: 25px;
+    object-fit: cover;
+    box-shadow: 0 15px 35px rgba(7, 39, 75, 0.25);
+}
+
+.small-title {
+    font-size: 18px;
+    font-weight: normal;
+    color: #082b52;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .hero-photo::before {
+        width: 250px;
+        height: 300px;
+    }
+
+    .hero-photo img {
+        width: 240px;
+        height: 290px;
+    }
+
+    .small-title {
+        font-size: 14px;
+    }
+}
