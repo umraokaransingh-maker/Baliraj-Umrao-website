@@ -729,3 +729,23 @@ footer {
 .language-switcher a:hover {
     transform: scale(1.05);
 }
+
+@media (max-width: 600px) {
+
+    header h1 {
+        text-align: left;
+        padding-left: 12px;
+        font-size: 25px;
+    }
+
+    .language-switcher {
+        top: 45px;
+        right: 10px;
+        gap: 4px;
+    }
+
+    .language-switcher a {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
