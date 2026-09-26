@@ -11,6 +11,11 @@
 
     <meta name="description" content="Baliraj Umrao — Senior Advocate and public figure. Information about his biography, legal journey, public life and contact details.">
 
+<meta name="keywords" content="Baliraj Umrao, Senior Advocate, Fatehpur Advocate, Advocate Baliraj Umrao, Fatehpur Uttar Pradesh">
+<meta name="author" content="Baliraj Umrao">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+
     <link rel="stylesheet" href="style.css">
 
 <script>
@@ -27,25 +32,53 @@ function setLanguage(lang) {
 
 <body>
 <div class="language-switcher">
-    <a href="index.html">हिंदी</a>
+    <a href="index.html"
+onclick="switchLanguage('index.html');
+return false;">हिंदी</a>
     <a href="english.html">English</a>
 </div>
     <header>
 
         <h1>Baliraj Umrao</h1>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#biography">Biography</a>
-            <a href="#journey">Journey</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#family">Family</a>
-            <a href="#contact">Contact</a>
-        </nav>
+       <nav>
+    <a href="#" onclick="showSection('home'); return false;">Home</a>
+    <a href="#" onclick="showSection('biography'); return false;">Biography</a>
+    <a href="#" onclick="showSection('journey'); return false;">Journey</a>
+    <a href="#" onclick="showSection('gallery'); return false;">Gallery</a>
+    <a href="#" onclick="showSection('family'); return false;">Family</a>
+    <a href="#" onclick="showSection('contact'); return false;">Contact</a>
+</nav>
 
     </header>
 
     <main>
+<script>
+function showSection(sectionId) {
+
+    const sections = document.querySelectorAll("main > section");
+
+    sections.forEach(section => {
+        section.style.display = "none";
+    });
+
+    document.getElementById(sectionId).style.display = "block";
+
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+    });
+
+    const activeLink = document.querySelector(
+        'nav a[onclick*="' + sectionId + '"]'
+    );
+
+    if (activeLink) {
+        activeLink.classList.add("active");
+    }
+}
+</script>
 
         <!-- HOME -->
 
@@ -87,13 +120,13 @@ function setLanguage(lang) {
 
                     <div class="hero-buttons">
 
-                        <a href="#biography" class="main-btn">
-                            Biography
-                        </a>
+                        <a href="#" class="main-btn" onclick="showSection('biography'); return false;">
+    Biography
+</a>
 
-                        <a href="#journey" class="outline-btn">
-                            View Journey
-                        </a>
+<a href="#" class="outline-btn" onclick="showSection('journey'); return false;">
+    View Journey
+</a>
 
                     </div>
 
@@ -231,7 +264,7 @@ function setLanguage(lang) {
                 to the election effort.
             </p>
 
-
+</section>
             <!-- JOURNEY -->
 
             <section id="journey">
@@ -606,114 +639,210 @@ function setLanguage(lang) {
 
                 </div>
 
-
+</section>
                 <!-- GALLERY -->
 
-                <section id="gallery">
+              <section id="gallery">
 
-                    <h2>Photo Gallery</h2>
+    <h2>Photo Gallery</h2>
 
-                    <div class="gallery-grid">
+    <div class="gallery-grid">
 
-                        <div class="gallery-item">
-                            <img src="Images/photo1.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo1.jpg" alt="Baliraj Umrao with Akhilesh Yadav" onclick="openImage(this.src)">
+            <h3>With Akhilesh Yadav Ji</h3>
+            <p>A photograph of Baliraj Umrao Ji shaking hands with Akhilesh Yadav Ji.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo2.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo2.jpg" alt="Baliraj Umrao with Akhilesh Yadav" onclick="openImage(this.src)">
+            <h3>With Akhilesh Yadav Ji</h3>
+            <p>Baliraj Umrao Ji with Akhilesh Yadav Ji, along with Naresh Uttam Ji and party leaders and workers.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo3.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo4.jpg" alt="Samajwadi Party Office" onclick="openImage(this.src)">
+            <h3>At the Samajwadi Party Office</h3>
+            <p>Baliraj Umrao Ji exchanging garlands with Akhilesh Yadav Ji, along with Naresh Uttam Ji.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo4.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo5.jpg" alt="Baliraj Umrao" onclick="openImage(this.src)">
+            <h3>Personal Photograph</h3>
+            <p>A personal photograph of Baliraj Umrao Ji.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo5.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo6.jpg" alt="Meeting with Beni Prasad" onclick="openImage(this.src)">
+            <h3>Meeting and Conversation</h3>
+            <p>An old photograph of Baliraj Umrao Ji meeting and interacting with Beni Prasad Ji.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo6.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo7.jpg" alt="Baliraj Umrao with Mulayam Singh Yadav" onclick="openImage(this.src)">
+            <h3>With Mulayam Singh Yadav Ji</h3>
+            <p>An old photograph of Baliraj Umrao Ji sitting on the stage during Mulayam Singh Yadav Ji's speech.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo7.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo8.jpg" alt="Baliraj Umrao with senior leaders" onclick="openImage(this.src)">
+            <h3>With Senior Leaders</h3>
+            <p>An old photograph of Baliraj Umrao Ji with Janeshwar Mishra Ji and Harimohan Singh Yadav Ji.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo8.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo9.jpg" alt="Baliraj Umrao addressing a gathering" onclick="openImage(this.src)">
+            <h3>Addressing a Gathering</h3>
+            <p>An old photograph of Baliraj Umrao Ji addressing a gathering with senior party leaders on the stage.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo9.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo10.jpg" alt="Baliraj Umrao with Ajit Singh" onclick="openImage(this.src)">
+            <h3>With Ajit Singh Ji</h3>
+            <p>An old photograph of Baliraj Umrao Ji with Ajit Singh Ji.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo10.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo12.jpg" alt="Baliraj Umrao with Mulayam Singh Yadav" onclick="openImage(this.src)">
+            <h3>A Respectful Meeting</h3>
+            <p>An old photograph of Mulayam Singh Yadav Ji and Baliraj Umrao Ji in a respectful greeting.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo11.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo15.jpg" alt="Baliraj Umrao with Mulayam Singh Yadav" onclick="openImage(this.src)">
+            <h3>Together on the Stage</h3>
+            <p>A photograph of Baliraj Umrao Ji holding the microphone during Mulayam Singh Yadav Ji's speech.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo12.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo16.jpg" alt="Baliraj Umrao with Naresh Uttam" onclick="openImage(this.src)">
+            <h3>With Naresh Uttam Ji</h3>
+            <p>An old photograph of Baliraj Umrao Ji with Naresh Uttam Ji.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo13.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/photo17.jpg" alt="Baliraj Umrao in conversation with Naresh Uttam" onclick="openImage(this.src)">
+            <h3>In Conversation</h3>
+            <p>A photograph of Baliraj Umrao Ji in conversation with Naresh Uttam Ji.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo14.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/journey1.jpg" alt="Baliraj Umrao with Mulayam Singh Yadav" onclick="openImage(this.src)">
+            <h3>Journey 1 — Procession</h3>
+            <p>An old photograph from a procession by bus with Mulayam Singh Yadav Ji in the 1980s.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo15.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/journey2.jpg" alt="Political gathering" onclick="openImage(this.src)">
+            <h3>Journey 2 — Public Gathering</h3>
+            <p>An old photograph from a gathering or rally showing the participation of party workers.</p>
+        </div>
 
-                        <div class="gallery-item">
-                            <img src="Images/photo16.jpg"
-                                 alt="Baliraj Umrao"
-                                 onclick="openImage(this.src)">
-                        </div>
+        <div class="gallery-item">
+            <img src="Images/journey3.jpg" alt="Mulayam Singh Yadav addressing a gathering" onclick="openImage(this.src)">
+            <h3>Journey 3 — On the Stage</h3>
+            <p>An old photograph from around 1990 showing Mulayam Singh Yadav Ji addressing a gathering, with Baliraj Umrao Ji seated beside him.</p>
+        </div>
 
-                    </div>
+        <div class="gallery-item">
+            <img src="Images/journey4.jpg" alt="Welcome of Mulayam Singh Yadav" onclick="openImage(this.src)">
+            <h3>Journey 4 — Welcome</h3>
+            <p>An old photograph from the occasion of welcoming Mulayam Singh Yadav Ji.</p>
+        </div>
 
+        <div class="gallery-item">
+            <img src="Images/journey6.jpg" alt="Baliraj Umrao with Rakesh Sachan" onclick="openImage(this.src)">
+            <h3>Journey 5 — With Rakesh Sachan Ji</h3>
+            <p>A photograph of Baliraj Umrao Ji in conversation with Rakesh Sachan Ji.</p>
+        </div>
 
+        <div class="gallery-item">
+            <img src="Images/journey8.jpg" alt="Meeting with Mulayam Singh Yadav" onclick="openImage(this.src)">
+            <h3>Journey 6 — Courtesy Meeting</h3>
+            <p>An old photograph from a courtesy meeting with Mulayam Singh Yadav Ji.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey9.jpg" alt="Special memories" onclick="openImage(this.src)">
+            <h3>Journey 7 — Special Memories</h3>
+            <p>A photograph connected with special memories from public life.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey10.jpg" alt="Baliraj Umrao with Rakesh Sachan and Mulayam Singh Yadav" onclick="openImage(this.src)">
+            <h3>Journey 8 — Stage Memories</h3>
+            <p>An old photograph from around 2005 with Rakesh Sachan Ji and Mulayam Singh Yadav Ji on the stage.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey11.jpg" alt="Baliraj Umrao with Akhilesh Yadav" onclick="openImage(this.src)">
+            <h3>Journey 9 — With Akhilesh Yadav Ji</h3>
+            <p>A photograph of Baliraj Umrao Ji with Akhilesh Yadav Ji from some time ago.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey12.jpg" alt="Baliraj Umrao with Shivpal Yadav" onclick="openImage(this.src)">
+            <h3>Journey 10 — With Shivpal Yadav Ji</h3>
+            <p>A photograph of Baliraj Umrao Ji with Shivpal Yadav Ji.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey13.jpg" alt="Baliraj Umrao with Shivpal Yadav" onclick="openImage(this.src)">
+            <h3>Journey 11 — Courtesy Meeting</h3>
+            <p>A photograph of Baliraj Umrao Ji during a courtesy meeting with Shivpal Yadav Ji.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey14.jpg" alt="Baliraj Umrao with Professor Ram Gopal Yadav" onclick="openImage(this.src)">
+            <h3>Journey 12 — With Professor Ram Gopal Yadav Ji</h3>
+            <p>A photograph from a meeting with Professor Ram Gopal Yadav Ji.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey16.jpg" alt="Baliraj Umrao with party workers" onclick="openImage(this.src)">
+            <h3>Journey 13 — Active Party Worker</h3>
+            <p>Baliraj Umrao Ji continuing his role as an active party worker.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey17.jpg" alt="Baliraj Umrao with Naresh Uttam" onclick="openImage(this.src)">
+            <h3>Journey 14 — With Naresh Uttam Ji</h3>
+            <p>A photograph of Baliraj Umrao Ji with Naresh Uttam Ji, Member of Parliament from Fatehpur.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey18.jpg" alt="Meeting with party workers" onclick="openImage(this.src)">
+            <h3>Journey 15 — Party Workers' Meeting</h3>
+            <p>A photograph from a meeting and organizational discussion with party workers.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey19.jpg" alt="Meeting with Naresh Uttam and party workers" onclick="openImage(this.src)">
+            <h3>Journey 16 — Meeting and Discussion</h3>
+            <p>A photograph of Baliraj Umrao Ji with Naresh Uttam Patel Ji and party workers.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey20.jpg" alt="Baliraj Umrao serving as an active party worker" onclick="openImage(this.src)">
+            <h3>Journey 17 — Active Role</h3>
+            <p>Baliraj Umrao Ji serving and fulfilling his responsibilities as an active party worker.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey21.jpg" alt="Fifth National Conference" onclick="openImage(this.src)">
+            <h3>Journey 18 — National Conference</h3>
+            <p>A photograph from participation in the Fifth National Conference of the Samajwadi Party.</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="Images/journey22.jpg" alt="Fifth National Conference" onclick="openImage(this.src)">
+            <h3>Journey 19 — National Conference</h3>
+            <p>A photograph showing participation in the Fifth National Conference of the Samajwadi Party.</p>
+        </div>
+
+    </div>
+
+</section>
                     <!-- FAMILY -->
 
                     <section id="family">
@@ -775,6 +904,36 @@ function setLanguage(lang) {
     </footer>
 
     <script src="script.js"></script>
+<script>
+<script>
+window.onload = function() {
+    const params = new URLSearchParams(window.location.search);
+    const section = params.get("section") || "home";
+    showSection(section);
+};
+
+function switchLanguage(page) {
+    const current = document.querySelector("main > section:not([style*='display: none'])");
+    const section = current ? current.id : "home";
+    window.location.href = page + "?section=" + section;
+}
+</script>
+</script>
+
+<script>
+function switchLanguage(page) {
+    const currentSection = document.querySelector("main > section[style*='block']");
+    const sectionId = currentSection ? currentSection.id : "home";
+
+    window.location.href = page + "?section=" + sectionId;
+}
+
+window.addEventListener("load", function() {
+    const params = new URLSearchParams(window.location.search);
+    const section = params.get("section") || "home";
+    showSection(section);
+});
+</script>
 
 </body>
 
