@@ -2,51 +2,96 @@
 <html lang="hi">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Baliraj Umrao | वरिष्ठ अधिवक्ता एवं सार्वजनिक जीवन</title>
+   <title>Baliraj Umrao | वरिष्ठ अधिवक्ता एवं सार्वजनिक जीवन</title>
 <meta name="description" content="बलिराज उमराव (Baliraj Umrao) — वरिष्ठ अधिवक्ता एवं सार्वजनिक जीवन से जुड़ी जानकारी, जीवनी, अधिवक्ता यात्रा और संपर्क विवरण।">
-    <meta name="keywords" content="Baliraj Umrao, बलिराज उमराव, वरिष्ठ अधिवक्ता, Baliraj Umrao Advocate, बलिराज उमराव अधिवक्ता">
-    <link rel="stylesheet" href="style.css">
+
+<meta name="keywords" content="Baliraj Umrao, बलिराज उमराव, Fatehpur, वरिष्ठ अधिवक्ता, Advocate Baliraj Umrao, Fatehpur Advocate">
+<meta name="author" content="Baliraj Umrao">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">   
+
+ <link rel="stylesheet" href="style.css">
+<script>
+function setLanguage(lang) {
+  if (lang === "en") {
+    window.location.href = "english.html";
+  } else {
+    window.location.href = "index.html";
+  }
+}
+</script>
 </head>
 
 <body>
 <div class="language-switcher">
     <a href="index.html">हिंदी</a>
-    <a href="english.html">English</a>
+    <a href="english.html"
+onclick="switchLanguage('english.html');
+return false;">English</a>
 </div>
-    <header>
-        <h1>Baliraj Umrao</h1>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#biography">Biography</a>
-            <a href="#journey">Journey</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#family">Family</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <header>
+        <h1>Baliraj umrao</h1>
+
+       <nav>
+    <a href="#" onclick="showSection('home'); return false;">Home</a>
+    <a href="#" onclick="showSection('biography'); return false;">Biography</a>
+    <a href="#" onclick="showSection('journey'); return false;">Journey</a>
+    <a href="#" onclick="showSection('gallery'); return false;">Gallery</a>
+    <a href="#" onclick="showSection('family'); return false;">Family</a>
+    <a href="#" onclick="showSection('contact'); return false;">Contact</a>
+</nav>
     </header>
 
     <main>
+<script>
+function showSection(sectionId) {
 
+    const sections = document.querySelectorAll("main > section");
+
+    sections.forEach(section => {
+        section.style.display = "none";
+    });
+
+    document.getElementById(sectionId).style.display = "block";
+
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+    });
+
+    const activeLink = document.querySelector(
+        'nav a[onclick*="' + sectionId + '"]'
+    );
+
+    if (activeLink) {
+        activeLink.classList.add("active");
+    }
+}
+</script>
         <section id="home">
 
     <div class="hero-content">
 
         <div class="hero-photo">
-            <img src="Images/baliraj-umrao.jpg" alt="बलिराज उमराव(Baliraj Umrao)-वरिष्ठ अधिवक्ता">
+            <img src="Images/baliraj-umrao.jpg" alt="बलिराज उमराव">
         </div>
 
         <div class="hero-text">
 
             <p class="welcome-text">आधिकारिक वेबसाइट</p>
 
-            <h2>बलिराज उमराव <span class="small-title">(वरिष्ठ अधिवक्ता)</span></h2>
+          <h2>बलिराज उमराव <span class="small-title">(वरिष्ठ अधिवक्ता)</span></h2>
+
+        <h3>पूर्व अध्यक्ष, बार एसोसिएशन, फतेहपुर (उत्तर प्रदेश)</h3>
+
             
-            <h3>पूर्व अध्यक्ष, बार एसोसिएशन, फतेहपुर (उत्तर प्रदेश)</h3>
-    
+
             <p>
                 श्री बलिराज उमराव जी के जीवन, अधिवक्ता के रूप में
                 कार्य, राजनीतिक एवं सार्वजनिक यात्रा तथा
@@ -56,13 +101,13 @@
 
             <div class="hero-buttons">
 
-                <a href="#biography" class="main-btn">
-                    जीवन परिचय
-                </a>
+               <a href="#" class="main-btn" onclick="showSection('biography'); return false;">
+    जीवन परिचय
+</a>
 
-                <a href="#journey" class="outline-btn">
-                    यात्रा देखें
-                </a>
+<a href="#" class="outline-btn" onclick="showSection('journey'); return false;">
+    यात्रा देखें
+</a>
 
             </div>
 
@@ -188,6 +233,8 @@
         पहुँचाने में महत्वपूर्ण भूमिका निभाई।
     </p>
 
+</section>
+
 <section id="journey">
 <div class="journey-heading">
     <h2>मेरी यात्रा</h2>
@@ -299,7 +346,6 @@
 <div class="journey-subtitle">
     <h2>राजनीतिक एवं सार्वजनिक यात्रा</h2>
 </div>
-
 <div class="journey-card">
     <span>1978</span>
     <div>
@@ -399,84 +445,246 @@
     </div>
 </div>
 
+</section>
+
 <section id="gallery">
 
     <h2>फोटो गैलरी</h2>
 
     <div class="gallery-grid">
 
+        <!-- Photo 1 -->
         <div class="gallery-item">
-            <img src="Images/photo1.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
-            
+            <img src="Images/photo1.jpg" alt="अखिलेश यादव जी के साथ बलिराज उमराव जी" onclick="openImage(this.src)">
+            <h3>अखिलेश यादव जी के साथ</h3>
+            <p>अखिलेश यादव जी से मुलाकात के दौरान हाथ मिलाते हुए की तस्वीर।</p>
         </div>
 
+        <!-- Photo 2 -->
         <div class="gallery-item">
-            <img src="Images/photo2.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
+            <img src="Images/photo2.jpg" alt="अखिलेश यादव जी के साथ" onclick="openImage(this.src)">
+            <h3>अखिलेश यादव जी के साथ</h3>
+            <p>अखिलेश यादव जी के साथ खड़े हुए, साथ में नरेश उत्तम जी तथा पार्टी के नेता और कार्यकर्ता।</p>
         </div>
 
+        <!-- Photo 4 -->
         <div class="gallery-item">
-            <img src="Images/photo3.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
+            <img src="Images/photo4.jpg" alt="समाजवादी कार्यालय" onclick="openImage(this.src)">
+            <h3>समाजवादी कार्यालय की तस्वीर</h3>
+            <p>अखिलेश यादव जी के साथ पुष्पमाला का आदान-प्रदान करते हुए, साथ में नरेश उत्तम जी।</p>
         </div>
 
+        <!-- Photo 5 -->
         <div class="gallery-item">
-            <img src="Images/photo4.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
+            <img src="Images/photo5.jpg" alt="बलिराज उमराव जी" onclick="openImage(this.src)">
+            <h3>व्यक्तिगत तस्वीर</h3>
+            <p>बलिराज उमराव जी की व्यक्तिगत तस्वीर।</p>
         </div>
 
+        <!-- Photo 6 -->
         <div class="gallery-item">
-            <img src="Images/photo5.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
-        </div>
- <div class="gallery-item">
-            <img src="Images/photo6.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
-        </div>
-
-       <div class="gallery-item">
-            <img src="Images/photo7.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
+            <img src="Images/photo6.jpg" alt="बलिराज उमराव जी और बेनी प्रसाद जी" onclick="openImage(this.src)">
+            <h3>भेंट-वार्ता</h3>
+            <p>बलिराज उमराव जी और बेनी प्रसाद जी के साथ भेंट-वार्ता की पुरानी तस्वीर।</p>
         </div>
 
+        <!-- Photo 7 -->
         <div class="gallery-item">
-            <img src="Images/photo8.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
+            <img src="Images/photo7.jpg" alt="मुलायम सिंह यादव जी के साथ" onclick="openImage(this.src)">
+            <h3>मुलायम सिंह यादव जी के साथ</h3>
+            <p>मुलायम सिंह यादव जी के भाषण के दौरान मंच पर उनके साथ बैठे बलिराज उमराव जी की पुरानी तस्वीर।</p>
         </div>
 
-         <div class="gallery-item">
-            <img src="Images/photo9.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
-        </div>
-
+        <!-- Photo 8 -->
         <div class="gallery-item">
-            <img src="Images/photo10.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
+            <img src="Images/photo8.jpg" alt="जनेश्वर मिश्रा जी और हरिमोहन सिंह यादव जी के साथ" onclick="openImage(this.src)">
+            <h3>वरिष्ठ नेताओं के साथ</h3>
+            <p>बलिराज उमराव जी के साथ जनेश्वर मिश्रा जी और हरिमोहन सिंह यादव जी की पुरानी तस्वीर।</p>
         </div>
 
+        <!-- Photo 9 -->
         <div class="gallery-item">
-            <img src="Images/photo11.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
+            <img src="Images/photo9.jpg" alt="मंच पर बलिराज उमराव जी" onclick="openImage(this.src)">
+            <h3>मंच से संबोधन</h3>
+            <p>बलिराज उमराव जी का भाषण देते हुए तथा मंच पर उपस्थित पार्टी के वरिष्ठ नेताओं की पुरानी तस्वीर।</p>
         </div>
 
+        <!-- Photo 10 -->
         <div class="gallery-item">
-            <img src="Images/photo12.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
+            <img src="Images/photo10.jpg" alt="अजीत सिंह जी के साथ" onclick="openImage(this.src)">
+            <h3>अजीत सिंह जी के साथ</h3>
+            <p>अजीत सिंह जी के साथ की पुरानी तस्वीर।</p>
         </div>
 
-         <div class="gallery-item">
-            <img src="Images/photo13.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
-        </div>
-
-       <div class="gallery-item">
-            <img src="Images/photo14.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
-        </div>
-  
-         <div class="gallery-item">
-            <img src="Images/photo15.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
-        </div>
-
+        <!-- Photo 12 -->
         <div class="gallery-item">
-            <img src="Images/photo16.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
+            <img src="Images/photo12.jpg" alt="मुलायम सिंह यादव जी और बलिराज उमराव जी" onclick="openImage(this.src)">
+            <h3>सम्मानपूर्ण भेंट</h3>
+            <p>मुलायम सिंह यादव जी और बलिराज उमराव जी की प्रणाम की मुद्रा में पुरानी तस्वीर।</p>
         </div>
 
-         <div class="gallery-item">
-            <img src="Images/photo17.jpg" alt="बलिराज उमराव" onclick="openImage(this.src)">
+        <!-- Photo 15 -->
+        <div class="gallery-item">
+            <img src="Images/photo15.jpg" alt="मुलायम सिंह यादव जी के साथ" onclick="openImage(this.src)">
+            <h3>मंच पर साथ</h3>
+            <p>मुलायम सिंह यादव जी के भाषण के दौरान बलिराज उमराव जी द्वारा माइक संभालते हुए तस्वीर।</p>
+        </div>
+
+        <!-- Photo 16 -->
+        <div class="gallery-item">
+            <img src="Images/photo16.jpg" alt="नरेश उत्तम जी के साथ" onclick="openImage(this.src)">
+            <h3>नरेश उत्तम जी के साथ</h3>
+            <p>नरेश उत्तम जी के साथ की बहुत पुरानी तस्वीर।</p>
+        </div>
+
+        <!-- Photo 17 -->
+        <div class="gallery-item">
+            <img src="Images/photo17.jpg" alt="नरेश उत्तम जी के साथ बातचीत" onclick="openImage(this.src)">
+            <h3>आपसी बातचीत</h3>
+            <p>नरेश उत्तम जी के साथ आपसी बातचीत करते हुए की तस्वीर।</p>
+        </div>
+
+
+        <!-- ================= JOURNEY PHOTOS ================= -->
+
+        <!-- Journey 1 -->
+        <div class="gallery-item">
+            <img src="Images/journey1.jpg" alt="मुलायम सिंह यादव जी के साथ शोभायात्रा" onclick="openImage(this.src)">
+            <h3>Journey 1 — शोभायात्रा</h3>
+            <p>1980 के दशक में मुलायम सिंह यादव जी के साथ बस से निकाली गई शोभायात्रा की पुरानी तस्वीर।</p>
+        </div>
+
+        <!-- Journey 2 -->
+        <div class="gallery-item">
+            <img src="Images/journey2.jpg" alt="धरना और रैली" onclick="openImage(this.src)">
+            <h3>Journey 2 — जनसभा</h3>
+            <p>धरना अथवा रैली के दौरान की पुरानी तस्वीर, जिसमें पार्टी कार्यकर्ताओं की सहभागिता दिखाई देती है।</p>
+        </div>
+
+        <!-- Journey 3 -->
+        <div class="gallery-item">
+            <img src="Images/journey3.jpg" alt="मुलायम सिंह यादव जी का भाषण" onclick="openImage(this.src)">
+            <h3>Journey 3 — मंच पर</h3>
+            <p>लगभग 1990 के आसपास मुलायम सिंह यादव जी के भाषण के दौरान मंच पर बैठे बलिराज उमराव जी की पुरानी तस्वीर।</p>
+        </div>
+
+        <!-- Journey 4 -->
+        <div class="gallery-item">
+            <img src="Images/journey4.jpg" alt="मुलायम सिंह यादव जी का स्वागत" onclick="openImage(this.src)">
+            <h3>Journey 4 — स्वागत</h3>
+            <p>मुलायम सिंह यादव जी के स्वागत के अवसर पर उनके साथ खड़े होकर जलपान करवाते हुए की पुरानी तस्वीर।</p>
+        </div>
+
+        <!-- Journey 6 -->
+        <div class="gallery-item">
+            <img src="Images/journey6.jpg" alt="राकेश सचान जी के साथ" onclick="openImage(this.src)">
+            <h3>Journey 5 — राकेश सचान जी के साथ</h3>
+            <p>राकेश सचान जी के साथ बातचीत करते हुए की कुछ समय पहले की तस्वीर।</p>
+        </div>
+
+        <!-- Journey 8 -->
+        <div class="gallery-item">
+            <img src="Images/journey8.jpg" alt="मुलायम सिंह यादव जी के साथ" onclick="openImage(this.src)">
+            <h3>Journey 6 — शिष्टाचार भेंट</h3>
+            <p>मुलायम सिंह यादव जी के साथ शिष्टाचार भेंट की पुरानी तस्वीर।</p>
+        </div>
+
+        <!-- Journey 9 -->
+        <div class="gallery-item">
+            <img src="Images/journey9.jpg" alt="विशेष स्मृतियां" onclick="openImage(this.src)">
+            <h3>Journey 7 — विशेष स्मृतियां</h3>
+            <p>सार्वजनिक जीवन की कुछ विशेष स्मृतियों से जुड़ी तस्वीर।</p>
+        </div>
+
+        <!-- Journey 10 -->
+        <div class="gallery-item">
+            <img src="Images/journey10.jpg" alt="राकेश सचान और मुलायम सिंह यादव जी के साथ" onclick="openImage(this.src)">
+            <h3>Journey 8 — मंच की पुरानी स्मृति</h3>
+            <p>लगभग 2005 के आसपास राकेश सचान जी और मुलायम सिंह यादव जी के साथ मंच की पुरानी तस्वीर।</p>
+        </div>
+
+        <!-- Journey 11 -->
+        <div class="gallery-item">
+            <img src="Images/journey11.jpg" alt="अखिलेश यादव जी के साथ" onclick="openImage(this.src)">
+            <h3>Journey 9 — अखिलेश यादव जी के साथ</h3>
+            <p>अखिलेश यादव जी के साथ कुछ समय पहले की तस्वीर।</p>
+        </div>
+
+        <!-- Journey 12 -->
+        <div class="gallery-item">
+            <img src="Images/journey12.jpg" alt="शिवपाल यादव जी के साथ" onclick="openImage(this.src)">
+            <h3>Journey 10 — शिवपाल यादव जी के साथ</h3>
+            <p>अखिलेश यादव जी के चाचा शिवपाल यादव जी के साथ की तस्वीर।</p>
+        </div>
+
+        <!-- Journey 13 -->
+        <div class="gallery-item">
+            <img src="Images/journey13.jpg" alt="शिवपाल यादव जी के साथ शिष्टाचार भेंट" onclick="openImage(this.src)">
+            <h3>Journey 11 — शिष्टाचार भेंट</h3>
+            <p>शिवपाल यादव जी के साथ शिष्टाचार भेंट की तस्वीर।</p>
+        </div>
+
+        <!-- Journey 14 -->
+        <div class="gallery-item">
+            <img src="Images/journey14.jpg" alt="प्रोफेसर रामगोपाल यादव जी के साथ" onclick="openImage(this.src)">
+            <h3>Journey 12 — प्रोफेसर रामगोपाल यादव जी के साथ</h3>
+            <p>समाजवादी पार्टी के राष्ट्रीय महासचिव प्रोफेसर रामगोपाल यादव जी से मुलाकात की तस्वीर।</p>
+        </div>
+
+        <!-- Journey 16 -->
+        <div class="gallery-item">
+            <img src="Images/journey16.jpg" alt="पार्टी कार्यकर्ताओं के साथ" onclick="openImage(this.src)">
+            <h3>Journey 13 — संगठन के साथ</h3>
+            <p>पार्टी के सक्रिय कार्यकर्ता के रूप में संगठन से जुड़े रहकर अपनी जिम्मेदारी निभाते हुए।</p>
+        </div>
+
+        <!-- Journey 17 -->
+        <div class="gallery-item">
+            <img src="Images/journey17.jpg" alt="नरेश उत्तम जी के साथ" onclick="openImage(this.src)">
+            <h3>Journey 14 — नरेश उत्तम जी के साथ</h3>
+            <p>वर्तमान सांसद फतेहपुर नरेश उत्तम जी के साथ की तस्वीर।</p>
+        </div>
+
+        <!-- Journey 18 -->
+        <div class="gallery-item">
+            <img src="Images/journey18.jpg" alt="पार्टी कार्यकर्ताओं के साथ बैठक" onclick="openImage(this.src)">
+            <h3>Journey 15 — कार्यकर्ताओं की बैठक</h3>
+            <p>पार्टी कार्यकर्ताओं के साथ बैठक और संगठनात्मक चर्चा की तस्वीर।</p>
+        </div>
+
+        <!-- Journey 19 -->
+        <div class="gallery-item">
+            <img src="Images/journey19.jpg" alt="नरेश उत्तम पटेल जी के साथ" onclick="openImage(this.src)">
+            <h3>Journey 16— भेंट-वार्ता</h3>
+            <p>नरेश उत्तम पटेल जी के साथ पार्टी कार्यकर्ताओं की भेंट-वार्ता की तस्वीर।</p>
+        </div>
+
+        <!-- Journey 20 -->
+        <div class="gallery-item">
+            <img src="Images/journey20.jpg" alt="पार्टी कार्यकर्ता के रूप में" onclick="openImage(this.src)">
+            <h3>Journey 17 — संगठन में सक्रिय भूमिका</h3>
+            <p>पार्टी के सक्रिय कार्यकर्ता के रूप में अपनी सेवा और जिम्मेदारी निभाते हुए।</p>
+        </div>
+
+        <!-- Journey 21 -->
+        <div class="gallery-item">
+            <img src="Images/journey21.jpg" alt="समाजवादी पार्टी का पांचवां राष्ट्रीय सम्मेलन" onclick="openImage(this.src)">
+            <h3>Journey 18 — राष्ट्रीय सम्मेलन</h3>
+            <p>समाजवादी पार्टी के पांचवें राष्ट्रीय सम्मेलन में सहभागिता की तस्वीर।</p>
+        </div>
+
+        <!-- Journey 22 -->
+        <div class="gallery-item">
+            <img src="Images/journey22.jpg" alt="पांचवां राष्ट्रीय सम्मेलन" onclick="openImage(this.src)">
+            <h3>Journey 19— राष्ट्रीय सम्मेलन</h3>
+            <p>पांचवें राष्ट्रीय सम्मेलन में सहभागिता प्रदर्शित करते हुए की तस्वीर।</p>
         </div>
 
     </div>
 
 </section>
-      <section id="family">
+
+<section id="family">
     <h2>पारिवारिक परिचय</h2>
 
     <p>
@@ -489,7 +697,6 @@
         इस वेबसाइट पर उपलब्ध कराया जाएगा।
     </p>
 </section>
-
 <section id="contact">
   <h2>संपर्क करें</h2>
 
@@ -514,6 +721,35 @@
     </footer>
 
     <script src="script.js"></script>
+<script>
+<script>
+window.onload = function() {
+    const params = new URLSearchParams(window.location.search);
+    const section = params.get("section") || "home";
+    showSection(section);
+};
+
+function switchLanguage(page) {
+    const current = document.querySelector("main > section:not([style*='display: none'])");
+    const section = current ? current.id : "home";
+    window.location.href = page + "?section=" + section;
+}
+</script>
+</script>
+<script>
+function switchLanguage(page) {
+    const currentSection = document.querySelector("main > section[style*='block']");
+    const sectionId = currentSection ? currentSection.id : "home";
+
+    window.location.href = page + "?section=" + sectionId;
+}
+
+window.addEventListener("load", function() {
+    const params = new URLSearchParams(window.location.search);
+    const section = params.get("section") || "home";
+    showSection(section);
+});
+</script>
 
 </body>
 </html>
