@@ -704,3 +704,28 @@ footer {
         font-size: 14px;
     }
 }
+/* Language Switcher */
+
+.language-switcher {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999;
+    display: flex;
+    gap: 6px;
+}
+
+.language-switcher a {
+    display: block;
+    background: white;
+    color: #333;
+    padding: 8px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.language-switcher a:hover {
+    transform: scale(1.05);
+}
