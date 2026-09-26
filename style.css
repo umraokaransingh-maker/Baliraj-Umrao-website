@@ -734,18 +734,18 @@ footer {
 
     header h1 {
         text-align: left;
-        padding-left: 12px;
-        font-size: 25px;
+        font-size: 30px;
+        padding-left: 10px;
     }
 
     .language-switcher {
-        top: 45px;
+        top: 15px;
         right: 10px;
         gap: 4px;
     }
 
     .language-switcher a {
-        padding: 6px 10px;
-        font-size: 12px;
+        padding: 5px 9px;
+        font-size: 11px;
     }
 }
